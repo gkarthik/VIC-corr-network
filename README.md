@@ -3,10 +3,20 @@
 d3.js interface to visualize associations between features in a dataset.
 
 ## Dependencies
-* [https://nodejs.org/en/](Nodejs)
+* [Node](https://nodejs.org/en/)
 
 To install packages run,
 
+```
 npm install
+```
+
+To run server locally run,
+
+```
+grunt serve
+```
+
+
 
 
