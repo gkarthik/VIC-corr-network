@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <style>
+    .links line {
+    }
+
+    .nodes {
+    pointer-events: all;
+    stroke: none;
+    stroke-width: 40px;
+    cursor: pointer;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    svg{
+    border: 1px solid #000000;
+    }
+
+    #sidebar {
+    float:left;
+    width: 500px;
+    margin-left:5px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    .sidebar-wrapper{
+    float:left;
+    width:200px;
+    }
+
+    #threshold-wrapper{
+    margin-left:5px;
+    }
+    #sidebar .category_legend{
+    float:left;
+    width:100%;
+    cursor: pointer;
+    -webkit-transition: width 5s; 
+    transition: width 5s;    
+    }
+
+    #sidebar .category_legend:hover{
+    background: #333333;
+    color:white;
+    }    
+
+    #sidebar .color_div{
+    height:10px;
+    width: 10px;
+    float:left;
+    margin:5px;
+    }
+
+    #sidebar .category_label{
+    float: left;
+    padding: 0px;
+    margin:0px 0px 0px 0px;
+    }
+    <!-- Slider -->
+    .ticks text{
+    font-size: 8px;
+    }
+
+    .track,
+    .track-inset,
+    .track-overlay {
+    stroke-linecap: round;
+    }
+
+    .track {
+    stroke: #000;
+    stroke-opacity: 0.3;
+    stroke-width: 10px;
+    }
+
+    .track-inset {
+    stroke: #ddd;
+    stroke-width: 8px;
+    }
+
+    .track-overlay {
+    pointer-events: stroke;
+    stroke-width: 50px;
+    stroke: transparent;
+    cursor: crosshair;
+    }
+
+    .handle {
+    fill: #fff;
+    stroke: #000;
+    stroke-opacity: 0.5;
+    stroke-width: 1.25px;
+    }
+  </style>
+</head>
+<body>
+  <svg id="network-svg" style="float:left"></svg>
+  <div id="sidebar">
+    <div id="select-wrapper" style="font-size:14px;margin-bottom:10px;">
+      <span>Choose Subset</span>      
+      <select id="cluster-options" style="font-size:20px;">
+	<option value="0" selected="selected">All</option>	
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+      </select>
+    </div>
+    <div id="category-wrapper" class="sidebar-wrapper">
+      <div id="category-legend-wrapper"></div>
+    </div>    
+    <div id="threshold-wrapper" class="sidebar-wrapper">
+      <div><b>Threshold:</b> <span id="limit_threshold"></span></div>      
+      <svg id="slider-svg"></svg>      
+      <button id="stop_simulation">Stop</button>
+    </div>    
+    <svg id="correlation-coeffecient-wrapper"></svg>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <!-- <script src="lib/vic-corr-network.js"></script> -->
+  <script src="dist/vic-corr-network.min.js"></script>
+</body>
+</html>
+
+
