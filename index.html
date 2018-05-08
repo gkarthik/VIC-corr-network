@@ -98,30 +98,25 @@
   <svg id="network-svg" style="float:left"></svg>
   <div id="sidebar">
     <div id="select-wrapper" style="font-size:14px;margin-bottom:10px;">
-      <span>Choose Subset</span>      
+      <span>Choose Subset</span>
       <select id="cluster-options" style="font-size:20px;">
-	<option value="0" selected="selected">All</option>	
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-	<option value="5">5</option>
+	<option value="0" selected="selected">All</option>
+	<option value="1">Weak Neutralizers</option>
+	<option value="2">Partial Neutralizers</option>
+	<option value="3">Strong Neutralizers</option>
       </select>
     </div>
     <div id="category-wrapper" class="sidebar-wrapper">
       <div id="category-legend-wrapper"></div>
-    </div>    
+    </div>
     <div id="threshold-wrapper" class="sidebar-wrapper">
-      <div><b>Threshold:</b> <span id="limit_threshold"></span></div>      
-      <svg id="slider-svg"></svg>      
+      <div><b>Threshold:</b> <span id="limit_threshold"></span></div>
+      <svg id="slider-svg"></svg>
       <button id="stop_simulation">Stop</button>
-    </div>    
+    </div>
     <svg id="correlation-coeffecient-wrapper"></svg>
   </div>
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <!-- <script src="lib/vic-corr-network.js"></script> -->
   <script src="dist/vic-corr-network.min.js"></script>
 </body>
 </html>
-
-
